@@ -9,7 +9,9 @@ def main():
         raise RuntimeError("api key not found")
 
     client = genai.Client(api_key=api_key)
-    response = client.models.generate_content(model='gemini-2.5-flash', contents="Why is Boot.dev such a great place to learn backend development? Use one paragraph maximum.")
+    response = client.models.generate_content(
+        model='gemini-2.5-flash', 
+        contents="Why is Boot.dev such a great place to learn backend development? Use one paragraph maximum.")
     print(response.text)
 
 
